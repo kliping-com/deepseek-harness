@@ -48,7 +48,8 @@ Pengalaman produk sejenis menunjukkan urutan yang salah akan mahal. Urutan yang 
 
 1. **Keamanan dan multi-user lebih dulu.** Tanpa autentikasi dan isolasi, setiap fitur berikutnya dibangun di atas asumsi yang harus dibongkar lagi.
 2. **Baru eksekusi jarak jauh.** Setelah ada pemilik untuk setiap sesi, kontainer per sesi menjadi masuk akal dan bisa ditagihkan.
-3. **Baru rantai alat Android.** Membangun alat build sebelum ada tempat berdaulat untuk menjalankannya berarti menguji di laptop orang.
-4. **Baru pengalaman "ketik ide → jadi aplikasi".** Lapisan ini murni produk: template, pratinjau, tombol unduh, galeri.
+3. **Baru loop pratinjau dan target web.** Inilah yang membuat produk terasa hidup, keluarannya paling cepat terbukti, dan seluruh komponennya dipakai ulang sebagai pratinjau APK nanti.
+4. **Baru rantai alat Android.** Membangun alat build sebelum ada tempat berdaulat untuk menjalankannya berarti menguji di laptop orang; dan setelah loop pratinjau hidup, APK hanyalah penyedia tambahan.
+5. **Baru pengalaman "ketik ide → jadi aplikasi" untuk orang awam.** Lapisan ini murni produk: template, tombol unduh, galeri, pagar biaya.
 
 Poin 1 dan 2 adalah pekerjaan platform yang tidak terlihat oleh pengguna, tetapi menentukan apakah produk ini bisa dijual sama sekali.

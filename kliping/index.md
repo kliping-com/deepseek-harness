@@ -12,7 +12,7 @@ Semua isi dokumen ini ditulis dari pembacaan kode dan dokumen di repositori pada
 | [02 — Bedah arsitektur](02-bedah-arsitektur.md) | Anatomi lengkap: boot, profil, bundle, agent loop, capability seam, session log, lapisan Web, gerbang mutu |
 | [03 — Killer features](03-killer-features.md) | Keunggulan nyata yang sulit ditiru pesaing, beserta bukti kodenya |
 | [04 — Status: super admin, belum untuk user](04-status-super-admin.md) | Jawaban atas pertanyaan "ini masih murni framework, ya?" beserta daftar celah menuju produk konsumen |
-| [05 — Roadmap Kliping App Builder](05-roadmap-app-builder.md) | Rencana bertahap dari framework developer menjadi "ketik ide → jadi APK", lengkap dengan paket baru yang perlu dibuat |
+| [05 — Roadmap Kliping App Builder](05-roadmap-app-builder.md) | Rencana bertahap dari framework developer menjadi "ketik ide → jadi aplikasi": engine kita versus provider yang bisa ditukar, loop pratinjau sebagai inti produk, target web lalu APK, lengkap dengan paket baru yang perlu dibuat |
 | [06 — Catatan rebranding](06-rebranding.md) | Apa yang sudah diganti menjadi Kliping, apa yang sengaja dibiarkan, dan cara melanjutkan |
 
 ## Ringkasan eksekutif
@@ -23,7 +23,9 @@ Semua isi dokumen ini ditulis dari pembacaan kode dan dokumen di repositori pada
 
 **Kondisi saat ini memang "untuk super admin", bukan untuk pengguna awam.** Server Web mengikat `127.0.0.1`, tanpa TLS, tanpa autentikasi, tanpa konsep akun; identitas pengguna bersifat anonim; kunci API disimpan di berkas home pengguna; agen berjalan dengan hak penuh milik akun sistem yang menjalankannya. Rinciannya di [dokumen 04](04-status-super-admin.md).
 
-**Jalan menuju app builder Android ada, dan jalurnya sudah setengah dibangun.** Yang sudah tersedia: eksekusi perintah, terminal persisten, jobs latar belakang, sandbox, workspace, plan mode, goal, deliverables (berkas hasil kerja yang bisa diklik), preset agen per sesi, dan POC sandbox jarak jauh E2B. Yang belum ada sama sekali: rantai alat Android (JDK/SDK/Gradle), pratinjau perangkat, penandatanganan APK, multi-user dengan autentikasi, dan kuota. [Dokumen 05](05-roadmap-app-builder.md) memetakan keduanya menjadi enam fase.
+**Jalan menuju app builder ada, dan jalurnya sudah setengah dibangun.** Yang sudah tersedia: eksekusi perintah, terminal persisten, jobs latar belakang, sandbox, workspace, plan mode, goal, deliverables (berkas hasil kerja yang bisa diklik), preset agen per sesi, POC sandbox jarak jauh E2B, dan server HTTP dengan rute prefix serta rute upgrade yang siap menyajikan pratinjau beserta kanal hot reload-nya. Yang belum ada sama sekali: rantai alat aplikasi apa pun (Expo, Gradle, JDK, Android SDK — nol baris kode produk hari ini), pratinjau, penandatanganan APK, multi-user dengan autentikasi, dan kuota. [Dokumen 05](05-roadmap-app-builder.md) memetakan keduanya menjadi enam fase, dengan loop pratinjau dan target web mendahului APK.
+
+**Expo dan EAS bukan engine kita.** Engine kita adalah harness ini; Expo, EAS, Gradle, dan Vite adalah kandidat penyedia di balik seam build dan pratinjau yang belum dibuat, dan semuanya dapat ditukar tanpa menyentuh satu pun alat yang dilihat model.
 
 ## Cara membaca
 
