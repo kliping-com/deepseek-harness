@@ -42,8 +42,12 @@ it('boots the built plugin graph and renders a fixture session end to end', asyn
 
   // The sidebar renders from the boot graph: every inject layer activated.
   const tree = await screen.findByRole('tree', { name: 'Sessions' }, { timeout: 10_000 })
-  expect(document.querySelector('svg[viewBox="26 0 156 24"]')).not.toBeNull()
-  expect(screen.queryByText('DSH Local Build')).toBeNull()
+  // The official brand occupant replaced the shell fallback: the brand row
+  // carries the product name alone, without the fallback's build revision.
+  const commitHash: unknown = Reflect.get(clientBuildEnvironment, 'DSH_CLIENT_COMMIT_HASH')
+  if (typeof commitHash !== 'string') throw new TypeError('client build record must carry DSH_CLIENT_COMMIT_HASH')
+  expect(screen.queryAllByText('Kliping').length).toBeGreaterThan(0)
+  expect(screen.queryByText(commitHash)).toBeNull()
   // The compact layout dropped group session counts; the fixture workspace
   // group row renders immediately with its sessions beneath it.
   const fixtureGroup = (await within(tree).findAllByText('fixture'))

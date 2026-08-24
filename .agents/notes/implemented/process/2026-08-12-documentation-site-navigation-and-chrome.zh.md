@@ -38,4 +38,4 @@ Status: implemented
 
 剥离 chrome 不改动规范 Markdown——切换行与徽章仍服务于 GitHub 读者。代价是投影器现在知晓源语料的两项呈现约定，而采用不同切换行措辞的页面将不会被匹配到。
 
-字标是同一图形的第二份副本，另两份位于 `apps/web/public/favicon.svg` 和 `packages/client/ui-primitives/src/FishLogo.tsx`，各自承载自己的呈现方式。DeepSeek 字标的变更只有通过更新这份副本才能到达文档站。
+字标位于 `website/public/wordmark.svg`，并由此内联；Web 客户端发布的品牌不含标记，因此文档站是这份图形唯一到达的界面。DeepSeek 字标的变更只有通过更新那份副本才能到达文档站。

@@ -16,9 +16,9 @@ import type { WorkspaceId } from '@deepseek-ai/dsh-client-runtime/client'
 declare module '@deepseek-ai/dsh-client-ui-slots' {
   interface SlotMap {
     /**
-     * Brand mark rendered in the expanded brand row and collapsed rail.
-     * Declared by this package's `sidebar` entry; deployments may replace
-     * the shell's fish fallback without replacing the surrounding controls.
+     * Brand mark rendered in the expanded brand row. Declared by this
+     * package's `sidebar` entry; the shell ships no mark of its own, so a
+     * deployment adds one here without replacing the surrounding controls.
      */
     'sidebar.brand.mark': { kind: 'single'; scope: 'root'; owner: SidebarBrandMarkOwnerProps }
     /**

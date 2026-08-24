@@ -1,0 +1,6 @@
+# Bilingual-pair consistency record (docs/i18n/README.md): the git blob hash of each
+# side as of the last confirmed-consistent state. Both languages carry equal authority;
+# after editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-24-kliping-product-brand.md
+2026-08-24-kliping-product-brand.md: ba2a1e69d76bcaa57b6b76202fa24c645a15104d
+2026-08-24-kliping-product-brand.zh.md: 601e18bea03a762763c777b7d4c35d019273da14

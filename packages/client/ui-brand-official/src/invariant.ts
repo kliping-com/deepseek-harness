@@ -15,8 +15,8 @@ export const name = 'client-ui-brand-official-invariant'
 export const inject = ['invariants']
 
 /**
- * No runtime invariant: the package retains no mutable state, and its three
- * slot occupants install and leave through one transactional effect.
+ * No runtime invariant: the package retains no mutable state, and its one
+ * slot occupant installs and leaves through a declaration-aware effect.
  */
 const install: InvariantInstaller = () => {}
 

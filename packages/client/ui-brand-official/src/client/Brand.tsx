@@ -1,22 +1,13 @@
-import { BrandWordmark, FishLogo } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { HeroBrandMarkOwnerProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { SidebarBrandMarkOwnerProps } from '@deepseek-ai/dsh-client-ui-sidebar/client'
-
-type OfficialBrandMarkProps = HeroBrandMarkOwnerProps & SidebarBrandMarkOwnerProps
+/** Official product-name occupant for the sidebar brand row. */
 
 /**
- * Render the official mark with the presentation requested by its host surface.
- * @param props - Host-supplied mark presentation.
- * @returns the official whale mark.
- */
-export function OfficialBrandMark({ size, className }: OfficialBrandMarkProps) {
-  return <FishLogo size={size} className={className} />
-}
-
-/**
- * Render the official name artwork without its independently slotted mark.
- * @returns the official name wordmark.
+ * Render the product name of an official build.
+ *
+ * The occupant carries no mark and no artwork: the shipped brand is the
+ * product name alone, and the sidebar shell owns its typography.
+ *
+ * @returns the product-name element.
  */
 export function OfficialBrandName() {
-  return <BrandWordmark includeMark={false} />
+  return <span>Kliping</span>
 }
